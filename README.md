@@ -1,2 +1,2 @@
 # constitution
-Student Robotics Southampton Constitution
+Southampton Competitive Robotics Outreach Constitution
