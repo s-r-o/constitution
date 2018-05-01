@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: kierdavis/nix-circle:latest
+    steps:
+      - checkout:
+          name: Checkout project source
+      - run:
+          name: Build document
+          command: nix-build
+      - store_artifacts:
+          name: Store build artifact
+          path: result/constitution.pdf
+          destination: constitution.pdf
