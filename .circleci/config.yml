@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: theorangeone/docker-pandoc
+    steps:
+      - checkout:
+          name: Checkout project source
+      - run:
+          name: Build document
+          command: make -C latex
+      - store_artifacts:
+          name: Store built PDF
+          path: latex/constitution.pdf
+          destination: constitution.pdf
